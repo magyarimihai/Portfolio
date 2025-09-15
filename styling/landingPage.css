@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.mainContainer .leftContent {
+    background-color: lightblue;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem 0 0.5rem 0;
+    border: 1px solid black;
+    border-radius: 2rem 0 0 2rem;
+}
+
+.mainContainer .leftContent .pictureContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer .leftContent .pictureContainer .picture {
+    height: 15rem;
+    border-radius: 2rem;
+}
+
+.mainContainer .leftContent .leftInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.mainContainer .leftContent .leftInfo .leftInfoTitle {
+    font-weight: bold;
+    font-size: large;
+}
+
+.mainContainer .mainContent {
+    height: 100vh;
+    width: 55%;
+    border: 1px solid black;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.mainContainer .mainContent .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
