@@ -1,6 +1,15 @@
 body {
     margin: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.6;
 }
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+}
+
 .mainContainer {
     display: flex;
     flex-direction: row;
@@ -11,7 +20,7 @@ body {
 
 .mainContainer .leftContent {
     background-color: lightblue;
-    width: 15%;
+    width: 17%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,19 +42,34 @@ body {
 .mainContainer .leftContent .leftInfo {
     display: flex;
     flex-direction: column;
-    margin-left: 1rem;
+    margin: 0.5rem 0 0 0.5rem;
 }
 
 .mainContainer .leftContent .leftInfo .leftInfoTitle {
     font-weight: bold;
     font-size: large;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
 }
+
+.mainContainer .leftContent .leftInfo .leftLists {
+  margin: 0 0 0.5rem 0;
+}
+
+.mainContainer .leftContent .leftInfo .icons {
+    height: 2rem;
+}
+
 
 .mainContainer .mainContent {
     height: 100vh;
-    width: 55%;
+    width: 30%;
     border: 1px solid black;
     border-radius: 0 2rem 2rem 0;
+    padding: 0 0.5rem 0 0.5rem;
 }
 
 .mainContainer .mainContent .name {
@@ -54,4 +78,8 @@ body {
     align-items: center;
     font-weight: bold;
     font-size: xx-large;
+}
+
+.mainContainer .mainContent .title {
+    font-weight: bold;
 }
