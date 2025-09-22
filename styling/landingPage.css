@@ -16,17 +16,18 @@ ul {
     box-sizing: border-box;
     justify-content: center;
     padding: 0.5rem 0 0.5rem 0;
+    background-image: url(../assets/table1.jpg)
+    
 }
 
 .mainContainer .leftContent {
-    background-color: lightblue;
+    background-color: #a3dff1;
     width: 17%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 0.5rem 0 0.5rem 0;
-    border: 1px solid black;
-    border-radius: 2rem 0 0 2rem;
+    border: 2px solid white;
 }
 
 .mainContainer .leftContent .pictureContainer {
@@ -35,8 +36,9 @@ ul {
 }
 
 .mainContainer .leftContent .pictureContainer .picture {
-    height: 15rem;
-    border-radius: 2rem;
+    height: 13rem;
+    border-radius: 50%;
+    border: 0.5rem solid white;
 }
 
 .mainContainer .leftContent .leftInfo {
@@ -52,11 +54,11 @@ ul {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    
+
 }
 
 .mainContainer .leftContent .leftInfo .leftLists {
-  margin: 0 0 0.5rem 0;
+    margin: 0 0 0.5rem 0;
 }
 
 .mainContainer .leftContent .leftInfo .icons {
@@ -65,21 +67,48 @@ ul {
 
 
 .mainContainer .mainContent {
-    height: 100vh;
     width: 30%;
-    border: 1px solid black;
-    border-radius: 0 2rem 2rem 0;
+    border: 2px solid white;
+    border-left: none;
+    /* border-radius: 0 2rem 2rem 0; */
     padding: 0 0.5rem 0 0.5rem;
+    background-color: white;
+
 }
 
 .mainContainer .mainContent .name {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     font-weight: bold;
     font-size: xx-large;
+    line-height: 0;
+
+
 }
 
 .mainContainer .mainContent .title {
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.mainContainer .mainContent .title img {
+    height: 2rem;
+}
+
+
+
+.mainContainer .mainContent .bonus {
+    display: flex;
+}
+
+.mainContainer .mainContent .mainInfo .dots {
+    list-style: circle;
+}
+
+.mainContainer .mainContent .bonus .dots {
+    list-style: circle;
 }
