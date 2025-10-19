@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magyari Mihai - Frontend Dev</title>
-    <link rel="stylesheet" href="../styling/landingPage.css">
+    <link rel="stylesheet" href="../styling/cvPage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,8 +14,28 @@
 </head>
 
 <body>
-    <div class="mainContainer">
 
+    <button id="open-sidebar" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <img src="../assets/sidebar-btn.svg">
+    </button>
+
+    <nav id="navbar">
+        <ul>
+            <li><button id="close-sidebar" onclick="closeSidebar()" aria-label="close sidebar"><img
+                        src="../assets/close-btn.svg"></button></li>
+            <li class="home"><a href="homePage.html" class="active-link" aria-current="page">Home</a></li>
+            <li><a href="calculator.html">Calculator & more</a></li>
+            <li><a href="App2.html">App2</a></li>
+            <li><a href="App3.html">App3</a></li>
+            <li><a href="cvPage.html" class="accent-link">CV</a></li>
+        </ul>
+
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+    <div class="mainContainer">
 
         <aside class="leftContent">
             <div class="pictureContainer"><img src="../assets/myPic.jpg" class="picture"></div>
@@ -26,8 +46,10 @@
                     <li>+40 730 551 833</li>
                     <li>magyari.mihaly15@gmail.com</li>
                     <li>Cluj-Napoca / Remote</li>
-                    <li><a href="https://www.linkedin.com/in/magyarimihaly" style="color: black;">Linkedin</a></li>
-                    <li><a href="https://github.com/magyarimihai/Portfolio" style="color: black;">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/magyarimihaly" style="color: black;"
+                            target="_blank">Linkedin</a></li>
+                    <li><a href="https://github.com/magyarimihai/Portfolio" style="color: black;"
+                            target="_blank">GitHub</a></li>
                 </ul>
 
                 <div class="leftInfoTitle"><img src="https://cdn-icons-png.flaticon.com/128/10262/10262278.png"
@@ -151,7 +173,7 @@
 
 
 
-    <script src="../script/landingPage.js"></script>
+    <script src="../script/script.js"></script>
 </body>
 
 </html>

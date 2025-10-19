@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../styling/calculatorApp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <button id="open-sidebar" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <img src="../assets/sidebar-btn.svg">
+    </button>
+
+    <nav id="navbar">
+        <ul>
+            <li><button id="close-sidebar" onclick="closeSidebar()" aria-label="close sidebar"><img
+                        src="../assets/close-btn.svg"></button></li>
+            <li class="home"><a href="homePage.html" class="active-link" aria-current="page">Home</a></li>
+            <li><a href="calculator.html">Calculator & more</a></li>
+            <li><a href="App2.html">App2</a></li>
+            <li><a href="App3.html">App3</a></li>
+            <li><a href="cvPage.html" class="accent-link">CV</a></li>
+        </ul>
+
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+
+    <h1>Calculator</h1>
+
+
+
+    <div class="grid-container">
+        <input type="text" class="item" style="grid-area: box-1" id="calc-display" readonly disabled />
+        <button id="onOff" type="button" class="item" style="grid-area: box-2"><span
+                style="color: lightgreen">ON</span></button>
+        <button id="allClear" type="button" class="item" style="grid-area: box-3"><span>AC</span></button>
+        <button id="backspace" type="button" class="item" style="grid-area: box-4"><span>&#8592;</span></button>
+        <button id="divide" type="button" class="item" style="grid-area: box-5"><span>&#247;</span></button>
+        <button id="seven" type="button" class="item num" style="grid-area: box-6"><span>7</span></button>
+        <button id="eight" type="button" class="item num" style="grid-area: box-7"><span>8</span></button>
+        <button id="nine" type="button" class="item num" style="grid-area: box-8"><span>9</span></button>
+        <button id="multiply" type="button" class="item" style="grid-area: box-9"><span>x</span></button>
+        <button id="four" type="button" class="item num" style="grid-area: box-10"><span>4</span></button>
+        <button id="five" type="button" class="item num" style="grid-area: box-11"><span>5</span></button>
+        <button id="six" type="button" class="item num" style="grid-area: box-12"><span>6</span></button>
+        <button id="minus" type="button" class="item" style="grid-area: box-13"><span>-</span></button>
+        <button id="one" type="button" class="item num" style="grid-area: box-14"><span>1</span></button>
+        <button id="two" type="button" class="item num" style="grid-area: box-15"><span>2</span></button>
+        <button id="three" type="button" class="item num" style="grid-area: box-16"><span>3</span></button>
+        <button id="plus" type="button" class="item" style="grid-area: box-17"><span>+</span></button>
+        <button id="doubleZero" type="button" class="item num" style="grid-area: box-18"><span>00</span></button>
+        <button id="zero" type="button" class="item num" style="grid-area: box-19"><span>0</span></button>
+        <button id="point" type="button" class="item" style="grid-area: box-20"><span>.</span></button>
+        <button id="equal" type="button" class="item" style="grid-area: box-21"><span>=</span></button>
+    </div>
+
+
+
+
+    <h1>Counter</h1>
+
+
+    <div class="counter-grid">
+        <input type="number" readonly disabled id="counterDisplay" style="grid-area: elem1;"></input>
+        <button type="button" class="counterBtn" style="grid-area: elem2;" id="addOne">+</button>
+        <button type="button" class="counterBtn" style="grid-area: elem3;" id="substractOne">-</button>
+        <button type="reset" class="counterBtn" style="grid-area: elem4;" id="resetCount">Reset</button>
+        <label for="chooseIncrement" style="grid-area: elem5;">Increment</label>
+        <select name="chooseIncrement" id="chooseIncrement" style="grid-area: elem6;">
+            <option value="0.5">0.5</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+    </div>
+
+
+    <script src="../script/script.js"></script>
+    <script src="../script/calculator.js"></script>
+
+</body>
+
+</html>

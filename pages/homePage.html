@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../styling/homePage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- <a href="#main-content" class="skip-link">Skip to main content</a> -->
+
+    <button id="open-sidebar" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <img src="../assets/sidebar-btn.svg">
+    </button>
+
+    <nav id="navbar">
+        <ul>
+            <li><button id="close-sidebar" onclick="closeSidebar()" aria-label="close sidebar"><img
+                        src="../assets/close-btn.svg"></button></li>
+            <li class="home"><a href="homePage.html" class="active-link" aria-current="page">Home</a></li>
+            <li><a href="calculator.html">Calculator & more</a></li>
+            <li><a href="App2.html">App2</a></li>
+            <li><a href="App3.html">App3</a></li>
+            <li><a href="cvPage.html" class="accent-link">CV</a></li>
+        </ul>
+
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+
+    <h1>Home</h1>
+
+
+    <script src="../script/script.js"></script>
+</body>
+
+</html>

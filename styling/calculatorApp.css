@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.6;
+}
+
+
+/* NAVBAR */
+
+/* .skip-link {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: hotpink;
+    color: black;
+    padding: 3rem 6rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.skip-link:focus {
+    opacity: 1;
+    pointer-events: auto;
+    outline: 2px solid black;
+} */
+
+
+nav {
+    background-color: black;
+    border-bottom: 1px solid black;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    display: flex;
+}
+
+nav .home {
+    margin-right: auto;
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 1rem 2rem;
+    transition: background-color 150ms ease;
+}
+
+nav a:hover {
+    background-color: #88AB75;
+}
+
+nav a.active-link {
+    border-bottom: 3px solid #FEEFE5;
+}
+
+nav a.accent-link {
+    background-color: #FF6B35;
+}
+
+#open-sidebar {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#close-sidebar {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#overlay {
+    background-color: #000000d2;
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    #open-sidebar,
+    #close-sidebar {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-left: 1px solid black;
+        transition: right 300ms ease-in-out;
+    }
+
+    nav.show {
+        right: 0;
+    }
+
+    nav.show~#overlay {
+        display: block;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        padding-left: 2.5rem;
+    }
+
+    nav a.active-link {
+        border-bottom: none;
+    }
+
+    nav .home {
+        margin-right: unset;
+    }
+
+
+}
+
+/* Content */
+
+/* Calculator */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 4rem 4rem 4rem 4rem;
+    grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem;
+    gap: 0.5rem;
+    grid-template-areas:
+        "box-1 box-1 box-1 box-1"
+        "box-2 box-3 box-4 box-5"
+        "box-6 box-7 box-8 box-9"
+        "box-10 box-11 box-12 box-13"
+        "box-14 box-15 box-16 box-17"
+        "box-18 box-19 box-20 box-21";
+    justify-content: center;
+    align-content: center;
+    width: 22rem;
+    height: 32rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    background-color: rgb(145, 150, 151);
+    box-shadow: 6px 5px 7px 3px #201f1f;
+}
+
+.item {
+    /* padding: 1rem; */
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    align-content: center;
+    cursor: pointer;
+    border-width: 1px;
+    /* border-style: dashed; */
+}
+
+
+#calc-display {
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    font-size: xx-large;
+    text-align: right;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.5rem
+}
+
+span {
+    font-size: x-large;
+}
+
+/* Counter */
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: 5rem 5rem 5rem;
+    grid-template-rows: 6rem 6rem;
+    grid-template-areas:
+        'elem1 elem1 elem1'
+        'elem2 elem3 elem4'
+        'elem5 elem6 elem6';
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    width: 20rem;
+    height: 15rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    box-shadow: 6px 5px 7px 1px #201f1f;
+}
+
+#counterDisplay {
+    width: 15rem;
+    height: 5rem;
+    font-size: xxx-large;
+    justify-items: center;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+.counterBtn {
+    width: 4rem;
+    height: 2rem;
+    /* border: 1px solid black; */
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 1px;
+
+}
+
+.counterBtn:hover {
+    cursor: pointer;
+}

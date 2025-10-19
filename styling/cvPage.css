@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
@@ -5,9 +9,117 @@ body {
     line-height: 1.6;
 }
 
-ul {
-    list-style-type: none;
-    margin-bottom: 0.5rem;
+nav {
+    background-color: black;
+    border-bottom: 1px solid black;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav li {
+    display: flex;
+}
+
+nav .home {
+    margin-right: auto;
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 1rem 2rem;
+    transition: background-color 150ms ease;
+}
+
+nav a:hover {
+    background-color: #88AB75;
+}
+
+nav a.active-link {
+    border-bottom: 3px solid #FEEFE5;
+}
+
+nav a.accent-link {
+    background-color: #FF6B35;
+}
+
+#open-sidebar {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#close-sidebar {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#overlay {
+    background-color: #000000d2;
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    #open-sidebar,
+    #close-sidebar {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-left: 1px solid black;
+        transition: right 300ms ease-in-out;
+    }
+
+    nav.show {
+        right: 0;
+    }
+
+    nav.show~#overlay {
+        display: block;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        padding-left: 2.5rem;
+    }
+
+    nav a.active-link {
+        border-bottom: none;
+    }
+
+    nav .home {
+        margin-right: unset;
+    }
+
+
 }
 
 .mainContainer {
@@ -17,8 +129,9 @@ ul {
     justify-content: center;
     padding: 0.5rem 0 0.5rem 0;
     background-image: url(../assets/table1.jpg)
-    
 }
+
+
 
 .mainContainer .leftContent {
     background-color: #a3dff1;
